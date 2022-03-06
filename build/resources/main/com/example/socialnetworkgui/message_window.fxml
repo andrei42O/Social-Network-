@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.AppGUI.Controllers.MessageController">
+   <children>
+      <BorderPane>
+         <left>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS/reports_window.css" BorderPane.alignment="CENTER">
+               <center>
+                  <ListView fx:id="chatsList" prefHeight="609.0" prefWidth="200.0" stylesheets="@CSS/reports_window.css" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <ComboBox fx:id="searchBar" prefHeight="25.0" prefWidth="372.0" promptText="Search" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <ToggleButton fx:id="createGroupButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="CREATE GROUP" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <ImageView fx:id="createGroupIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/create_group_icon.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </ToggleButton>
+               </bottom>
+            </BorderPane>
+         </left>
+         <center>
+            <BorderPane prefHeight="675.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+               <bottom>
+                  <BorderPane prefHeight="96.0" prefWidth="591.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <TextArea fx:id="textArea" prefHeight="65.0" prefWidth="497.0" BorderPane.alignment="CENTER" />
+                     </center>
+                     <right>
+                        <ToggleButton fx:id="sendButton" mnemonicParsing="false" styleClass="sendButton" stylesheets="@CSS/message_window.css" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView fx:id="sendMessageButtonImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="sendMessageButtonImage">
+                                 <image>
+                                    <Image url="@images/send_message_button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></ToggleButton>
+                     </right>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <ListView fx:id="messageList" prefHeight="295.0" prefWidth="586.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <BorderPane prefHeight="44.0" prefWidth="786.0" BorderPane.alignment="CENTER">
+               <left>
+                  <BorderPane prefHeight="37.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <ImageView fx:id="profilePicture" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <Label fx:id="fullNameLabel" text="Smekeru Metin2" BorderPane.alignment="CENTER" />
+                           </center>
+                           <bottom>
+                              <Label fx:id="usernameLabel" text="\@laurentiu" BorderPane.alignment="CENTER" />
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </left>
+               <center>
+
+               </center>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="chatName" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+                        <Label fx:id="participantsLabel" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+         </top>
+      </BorderPane>
+      <BorderPane prefHeight="51.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

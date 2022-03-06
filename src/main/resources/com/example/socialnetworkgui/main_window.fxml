@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="840.0" styleClass="background" stylesheets="@CSS/login_page.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.AppGUI.Controllers.MainWindowController">
+   <children>
+      <Pane fx:id="rightPane" layoutX="-1.0" layoutY="-4.0" prefHeight="414.0" prefWidth="152.0" stylesheets="@CSS/login_page.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="fullNameLabel" layoutX="28.0" layoutY="140.0" text="Andrei Aciob.">
+               <font>
+                  <Font name="Bodoni MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="25.0" layoutY="275.0" prefHeight="119.0" prefWidth="103.0" spacing="15.0">
+               <children>
+                  <Button fx:id="messageButton" alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onAction="#handleMessageButton" prefHeight="40.0" prefWidth="127.0" stylesheets="@CSS/main_window.css" text="Messages" />
+                  <Button fx:id="reportsButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" stylesheets="@CSS/main_window.css" text="Reports" textFill="#2c2c2c" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <Label fx:id="shownUsernameLabel" layoutX="42.0" layoutY="174.0" opacity="0.52" text="\@aNdrei42O" />
+            <VBox layoutX="21.0" layoutY="9.0" style="-fx-border-radius: 20;">
+               <children>
+                  <ImageView fx:id="profileImage" fitHeight="123.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <ToggleButton fx:id="logoutButton" layoutX="6.0" layoutY="488.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" rotate="-180.0" style="-fx-background-color: transparent;" styleClass="logoutButton" stylesheets="@CSS/main_window.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+         </children>
+      </Pane>
+      <TabPane fx:id="tabPane" layoutX="167.0" layoutY="15.0" prefHeight="372.0" prefWidth="425.0" snapToPixel="false" stylesheets="@CSS/main_window.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+        <tabs>
+            <Tab fx:id="homeTab" text="Home">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/home_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="friendsTab" text="Friends">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/friends_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+          <Tab id="E" fx:id="eventsTab" text="Events">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="358.0" prefWidth="461.0">
+                     <effect>
+                        <GaussianBlur />
+                     </effect>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/event_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab fx:id="notificationsTab" text="Notifications">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+               <graphic>
+                  <ImageView fx:id="notificationsIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/notification_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

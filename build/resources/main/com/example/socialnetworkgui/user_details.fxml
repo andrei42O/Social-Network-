@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" stylesheets="@CSS/user_details.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.AppGUI.Controllers.UserDetailsController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="455.0" prefWidth="625.0" stylesheets="@CSS/user_details.css">
+         <children>
+            <GridPane prefHeight="395.0" prefWidth="363.0" styleClass="background" stylesheets="@CSS/user_details.css">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="159.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="159.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="184.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="usernameLabel" styleClass="profileInfoCredentials" stylesheets="@CSS/user_details.css" text="\@boss1337" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label styleClass="profileInfoInformationLabels" stylesheets="@CSS/user_details.css" text="First Name:" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="profileInfoInformationLabels" stylesheets="@CSS/user_details.css" text="Last Name:" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="profileInfoInformationLabels" stylesheets="@CSS/user_details.css" text="Username:" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <Label fx:id="firstNameLabel" styleClass="profileInfoCredentials" stylesheets="@CSS/user_details.css" text="smekerasu" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lastNameLabel" styleClass="profileInfoCredentials" stylesheets="@CSS/user_details.css" text="metin2" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnSpan="3" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <ImageView fitHeight="150.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/welcome_app_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="157.0" style="-fx-font-size: 17; -fx-font-family: Verdana; -fx-text-fill: black;" text="PROFILE INFO" textFill="#000000ba" GridPane.columnSpan="3">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox>
+               <children>
+                  <TitledPane fx:id="friendsListTitledPane" alignment="TOP_CENTER" animated="false" text="Friends List">
+                     <content>
+                        <ScrollPane>
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="376.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="friendsList" editable="true" prefHeight="381.0" prefWidth="200.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

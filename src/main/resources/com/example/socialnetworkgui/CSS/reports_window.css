@@ -1,0 +1,8 @@
+.background{
+    -fx-background-image: url('../images/report_gif.gif');
+    -fx-background-size: cover;
+}
+
+.checkBox{
+    -fx-background-image: url('../images/check_box_photo.jpg');
+}

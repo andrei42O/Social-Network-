@@ -1,0 +1,21 @@
+.background{
+    -fx-background-color: rgba(255, 255, 255, 5);
+    -fx-background-insets: 10;
+}
+
+.profileInfoCredentials{
+    -fx-font-size: 14px;
+    -fx-padding: 10 15 10 15;
+    -fx-border-width: 1;
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-min-width: 200px;
+    -fx-pref-width: 200px;
+    -fx-max-width: 200px;
+    -fx-text-fill: gray;
+}
+
+.profileInfoInformationLabels{
+    -fx-font-smoothing-type: lcd;
+    -fx-fill: white;
+    -fx-font-size: 9pt;
+}

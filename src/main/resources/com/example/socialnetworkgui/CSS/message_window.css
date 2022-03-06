@@ -1,0 +1,8 @@
+.sendButton{
+    -fx-background-color: transparent;
+}
+
+.sendMessageButtonImage{
+    -fx-background-radius: 25%;
+    -fx-border-radius: 25%;
+}

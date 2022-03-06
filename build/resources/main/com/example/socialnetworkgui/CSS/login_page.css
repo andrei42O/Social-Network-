@@ -1,0 +1,30 @@
+.background{
+    -fx-background-image: url('../images/home_tab_background1.jpg');
+    -fx-background-color: white;
+    -fx-background-size: cover;
+}
+
+.loginButton{
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-border-color: #edf6f9 ;
+    -fx-border-width: 5px;
+    -fx-text-fill: #171718;
+}
+
+.loginButton:hover{
+    fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    /*-fx-background-insets: 0 0 -1 0, 0, 1, 2;*/
+    -fx-background-radius: 10px;
+    /*-fx-text-fill: -fx-text-base-color;*/
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+    -fx-border-color: #4c4b4b;
+    -fx-border-width: 5px;
+    -fx-text-fill: #878585;
+}
+
+.pinnedLabels{
+    -fx-font-family: Bookman, URW Bookman L, serif;
+    -fx-font-size: 16px;
+}
